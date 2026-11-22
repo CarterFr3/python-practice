@@ -17,5 +17,5 @@ Small Python programs I write myself while learning. I work through lessons on M
 
 ## Next up
 - Keep asking until the user picks a valid menu item, and make the menu check ignore capitalization
-- Reading and summarizing a CSV file
+- Dictionaries, to replace the if/elif chains.
 - An expense tracker as a final project, with no AI help
