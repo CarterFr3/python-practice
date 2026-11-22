@@ -14,6 +14,8 @@ Small Python programs I write myself while learning. I work through lessons on M
 | `task_list.py` | Console to-do list: add, remove, or quit | Written myself, no AI |
 | `ordering.py` | Food ordering system: shows a menu, takes an item and quantity, confirms or says not found | Rebuilt from memory after working through the Mimo version; AI helped explain a bug |
 | `food_order_rewrite.py` | The same idea with American and Italian menus | Rewritten from memory, peeked once at the food-type input; AI pointed me to bugs as hints |
+| `cafe_order_system.py` | Cafe ordering program with a daily special and a menu with prices... (in progress) | Writing it myself from a blank file, planning in comments first... |
+
 
 ## Next up
 - Keep asking until the user picks a valid menu item, and make the menu check ignore capitalization
