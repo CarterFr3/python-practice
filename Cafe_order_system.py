@@ -31,7 +31,22 @@ def show_menu(menu, prices, today_specials):
     for item in menu:
         print(f"{item}: ${prices[menu.index(item)]}")
 
+def add_to_cart(item, cart):
+    if find_menu(item, menu):
+        cart.append(item)
+        return f"Added! {item}"
+    else:
+        return f"{item} not found in the menu"
+
+
+
+
+
+
 
 
 today_specials = specials()
 show_menu(menu, prices, today_specials)
+print(add_to_cart("Pizza", cart))
+print(add_to_cart("crackers", cart))
+print(f"Your cart contains: {cart}")
