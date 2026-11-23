@@ -29,7 +29,10 @@ def find_menu(item, menu):
 
 def show_menu(menu, prices, today_specials):
     for item in menu:
-        print(f"{item}: ${prices[menu.index(item)]}")
+        if item == today_specials:
+            print(f"*{today_specials}: ${prices[menu.index(today_specials)]}")
+        else:
+            print(f"{item}: ${prices[menu.index(item)]}")
 
 
 def add_to_cart(item, cart, price):
@@ -43,15 +46,11 @@ def add_to_cart(item, cart, price):
 today_specials = specials()
 show_menu(menu, prices, today_specials)
 
-user_input = input("What would you like? ")
-cart = user_input
-print(f"You picked {cart}, that will be ${prices[menu.index(cart)]}")
-
-
-
-
-
-
-
-
-
+cart = []
+while True:
+    choice = input("What would you like? ")
+    if find_menu(choice, menu):
+        print(f"You picked {choice}, that will be ${prices[menu.index(choice)]}")
+        break
+    else:
+        print("Item Not found")
