@@ -15,13 +15,13 @@ def specials():
         else:
             print("Please give a Y or N ")
     if random_special == "Burger":
-        print(f"Today's Special is {menu[0]}s for ${prices[0]}")
+        print(f"Today's Special is {menu[0]} for ${prices[0]}")
     elif random_special == "Fries":
-        print(f"Today's Special is {menu[1]}s for ${prices[1]}")
+        print(f"Today's Special is {menu[1]} for ${prices[1]}")
     elif random_special == "Pizza":
-        print(f"Today's Special is {menu[2]}s for ${prices[2]}")
+        print(f"Today's Special is {menu[2]} for ${prices[2]}")
     else:
-        print(f"Today's Special is {menu[3]}s for ${prices[3]}")
+        print(f"Today's Special is {menu[3]} for ${prices[3]}")
     return random_special
 
 def find_menu(item, menu):
@@ -31,22 +31,27 @@ def show_menu(menu, prices, today_specials):
     for item in menu:
         print(f"{item}: ${prices[menu.index(item)]}")
 
-def add_to_cart(item, cart):
+
+def add_to_cart(item, cart, price):
     if find_menu(item, menu):
         cart.append(item)
-        return f"Added! {item}"
+        return f"Added! {item} for {price}"
     else:
         return f"{item} not found in the menu"
 
 
-
-
-
-
-
-
 today_specials = specials()
 show_menu(menu, prices, today_specials)
-print(add_to_cart("Pizza", cart))
-print(add_to_cart("crackers", cart))
-print(f"Your cart contains: {cart}")
+
+user_input = input("What would you like? ")
+cart = user_input
+print(f"You picked {cart}, that will be ${prices[menu.index(cart)]}")
+
+
+
+
+
+
+
+
+
